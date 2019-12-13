@@ -27,7 +27,7 @@ private :
    float clonageProbability;
    float alphaMin, alphaMax; 
    float deltaYmin, deltaYmax;
-   float delta0min, delta0max;
+   float deltaOmin, deltaOmax;
    float gammaMin, gammaMax;
 
 
@@ -41,8 +41,8 @@ public :
    float get_alphaMax( void ) const { return alphaMax;};
    float get_deltaYmin( void ) const { return deltaYmin;};
    float get_deltaYmax( void ) const { return deltaYmax;};
-   float get_delta0min( void ) const { return delta0min;};
-   float get_delta0max( void ) const { return delta0max;};
+   float get_deltaOmin( void ) const { return deltaOmin;};
+   float get_deltaOmax( void ) const { return deltaOmax;};
    float get_gammaMin( void ) const { return gammaMin;};
    float get_gammaMax( void ) const { return gammaMax;};
 

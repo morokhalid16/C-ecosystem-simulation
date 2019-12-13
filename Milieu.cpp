@@ -10,14 +10,7 @@ const T    Milieu::white[] = { (T)255, (T)255, (T)255 };
 Milieu::Milieu( int _width, int _height ) : UImg( _width, _height, 1, 3 ),
                                             width(_width), height(_height)
 {	
-<<<<<<< HEAD
-   deathProbability=0.1;
-   birthProbability=0.1;
-   cloneProbability=0.001;
-   cout << "const Milieu" << endl;
 
-   std::srand( time(NULL) );
-=======
     deathProbability=0.1;
     birthProbability=0.09;
     cout << "const Milieu" << endl;
@@ -30,7 +23,7 @@ Milieu::Milieu( int _width, int _height ) : UImg( _width, _height, 1, 3 ),
     gammaMin = 0.1;
     gammaMax = 0.8;
     std::srand( time(NULL) );
->>>>>>> refs/remotes/origin/master
+
 
 }
 
