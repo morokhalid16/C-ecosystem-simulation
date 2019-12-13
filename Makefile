@@ -7,6 +7,9 @@ Aquarium.o : Aquarium.h Aquarium.cpp
 Bestiole.o : Bestiole.h Bestiole.cpp
 	g++ -Wall -std=c++11  -c Bestiole.cpp -I .
 
+Capteur.o : Capteur.h Capteur.cpp
+	g++ -Wall -std=c++11  -c Capteur.cpp -I .
+
 Comportement.o : Comportement.h Comportement.cpp
 	g++ -Wall -std=c++11  -c Comportement.cpp -I .
 

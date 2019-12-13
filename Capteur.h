@@ -17,7 +17,7 @@
 
 using namespace std;
 
-class Capteur :
+class Capteur
 {
     private :
         Bestiole *laBestiole;
@@ -26,14 +26,7 @@ class Capteur :
         double deltaO;
         double gamma;
     public :
-        Capteur(Bestiole * laBestiol){
-            laBestiole = laBestiol;
-            alpha = laBestiole->getMilieu()->get_alphaMin()+static_cast<double>( rand() )/RAND_MAX*(laBestiole->getMilieu()->get_alphaMax()-laBestiole->getMilieu()->get_alphaMin()) ;
-            deltaY = laBestiole->getMilieu()->get_deltaYMin()+static_cast<double>( rand() )/RAND_MAX*(laBestiole->getMilieu()->get_deltaYmax()-laBestiole->getMilieu()->get_deltaYmin()) ;
-            deltaO = laBestiole->getMilieu()->get_deltaOmin()+static_cast<double>( rand() )/RAND_MAX*(laBestiole->getMilieu()->get_deltaOmax()-laBestiole->getMilieu()->get_deltaOmin()) ;
-            gamma = laBestiole->getMilieu()->get_gammaMin()+static_cast<double>( rand() )/RAND_MAX*(laBestiole->getMilieu()->get_gammaMax()-laBestiole->getMilieu()->get_gammaMin()) ;
-            laBestiole ->attach(this);
-        }
+        Capteur(Bestiole * laBestiol){};
     
         ~Capteur();
     
@@ -41,7 +34,8 @@ class Capteur :
     
     protected :
         Bestiole *getBestiole(){
-            return laBestiole;
         }
-}
+};
+
+
 #endif /* Capteur_h */

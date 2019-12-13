@@ -1,10 +1,10 @@
 #include "Bestiole.h"
 
 #include "Milieu.h"
-
+#include <vector>
 #include <cstdlib>
 #include <cmath>
-
+using namespace std;
 
 const double      Bestiole::AFF_SIZE = 8.;
 const double      Bestiole::MAX_VITESSE = 10;
@@ -31,7 +31,6 @@ Bestiole::Bestiole( void )
    couleur[ 2 ] = static_cast<int>( static_cast<double>( rand() )/RAND_MAX*230. );
 
 }
-
 
 Bestiole::Bestiole( const Bestiole & b )
 {
@@ -69,6 +68,10 @@ void Bestiole::initCoords( int xLim, int yLim )
 
 }
 
+void Bestiole::attach(Capteur nouvCapteur)
+{
+    listeCapteurs.push_back(nouvCapteur);
+}
 
 void Bestiole::bouge( int xLim, int yLim )
 {
@@ -113,7 +116,13 @@ void Bestiole::action( Milieu & monMilieu )
 
 }
 
-
+void Bestiole::notifyCapteurs()
+{
+   /* for ( std::vector<Capteur>::iterator itr = listeCapteurs.begin() ; itr != listeCapteurs.end() ; ++itr )
+    {
+        *itr.update();
+    };*/
+}
 void Bestiole::draw( UImg & support )
 {
 
