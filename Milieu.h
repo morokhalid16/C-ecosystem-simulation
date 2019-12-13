@@ -23,6 +23,7 @@ private :
    int                     width, height;
    std::vector<Bestiole>   listeBestioles;
    float deathProbability, birthProbability;
+   float clonageProbability;
    float alphaMin, alphaMax; 
    float deltaYmin, deltaYmax;
    float delta0min, delta0max;
@@ -32,6 +33,7 @@ private :
 public :
    Milieu( int _width, int _height );
    ~Milieu( void );
+   std::vector<Bestiole> get_listeBestionle(void){return listeBestioles;};
    float get_deathProbability( void ) const { return deathProbability;};
    float get_birthProbability( void ) const { return birthProbability;};
    float get_alphaMin( void ) const { return alphaMin;};
@@ -47,9 +49,9 @@ public :
    int getHeight( void ) const { return height; };
 
    void step( void );
-
-   void addMember( const Bestiole & b ) { listeBestioles.push_back(b); listeBestioles.back().initCoords(width, height); } 
-   void removeMember ( ) { listeBestioles.erase(listeBestioles.begin()+1);};
+   //void cloneMember(const Bestiole & b){listeBestioles.push_back(b); listeBestioles.back().initCoords(width, height); };
+   void addMember( const Bestiole & b ) { listeBestioles.push_back(b); listeBestioles.back().initCoords(width, height); } ;
+   void removeMember ( void) ;
    int nbVoisins( const Bestiole & b );
 
 };
