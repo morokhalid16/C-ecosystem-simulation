@@ -23,6 +23,7 @@ private :
    int                     width, height;
    std::vector<Bestiole>   listeBestioles;
    float deathProbability, birthProbability;
+   float cloneProbability;
    float clonageProbability;
    float alphaMin, alphaMax; 
    float deltaYmin, deltaYmax;
@@ -48,6 +49,9 @@ public :
    int getWidth( void ) const { return width; };
    int getHeight( void ) const { return height; };
 
+   void born(void);
+   void die(void);
+   void clone(void);
    void step( void );
    //void cloneMember(const Bestiole & b){listeBestioles.push_back(b); listeBestioles.back().initCoords(width, height); };
    void addMember( const Bestiole & b ) { listeBestioles.push_back(b); listeBestioles.back().initCoords(width, height); } ;
