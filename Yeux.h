@@ -27,7 +27,7 @@ class Yeux: public Capteur {
         double orient = getBestiole()->getOrientation();
         double deltaY = this.deltaY;
         double alpha = this.alpha;
-        double gamma = getBestiole()->getMilieu()->getGamma();
+        double gamma = getBestiole()->getGamma();
         std::vector<Bestiole> newListV;
         std::vector<Bestiole> listB= getBestiole()->getMilieu()->getListeBestioles();
         double probVoir = static_cast<double>( rand() )/RAND_MAX;

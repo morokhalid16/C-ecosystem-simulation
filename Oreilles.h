@@ -26,7 +26,7 @@ class Oreilles: public Capteur {
         double yBest = getBestiole()->getY();
         double orient = getBestiole()->getOrientation();
         double deltaO = this.deltaO;
-        double gamma = getBestiole()->getMilieu()->getGamma();
+        double gamma = getBestiole()->getGamma();
         std::vector<Bestiole> newListV;
         std::vector<Bestiole> listB= getBestiole()->getMilieu()->getListeBestioles();
         double probVoir = static_cast<double>( rand() )/RAND_MAX;
