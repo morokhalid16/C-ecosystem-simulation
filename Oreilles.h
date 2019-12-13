@@ -1,10 +1,10 @@
 //
-//  Yeux.h
+//  Oreilles.h
 //
 //
 //
-#ifndef Yeux_h
-#define Yeux_h
+#ifndef Oreilles_h
+#define Oreilles_h
 #include <stdio.h>
 #include "Bestiole.h"
 
@@ -18,15 +18,14 @@
 
 using namespace std;
 
-class Yeux: public Capteur {
+class Oreilles: public Capteur {
     public:
-        Yeux(Bestiole *laBestiole): Capteur(laBestiole){}
+        Oreilles(Bestiole *laBestiole): Capteur(laBestiole){}
     void update(){
         double xBest = getBestiole()->getX();
         double yBest = getBestiole()->getY();
         double orient = getBestiole()->getOrientation();
-        double deltaY = this.deltaY;
-        double alpha = this.alpha;
+        double deltaO = this.deltaO;
         double gamma = getBestiole()->getMilieu()->getGamma();
         std::vector<Bestiole> newListV;
         std::vector<Bestiole> listB= getBestiole()->getMilieu()->getListeBestioles();
@@ -35,17 +34,14 @@ class Yeux: public Capteur {
         {
             double xCur = it->getX();
             double yCur = it->getY();
-            double angle = (atan2(yCur-yBest,xCur-xBest)*180 / PI)-orient;
-            if (angle<alpha/2){
-                double dist = sqrt(pow(yCur-yBest,2)+pow(xCur-xBest,2));
-                if (dist<deltaY){
-                    if (probVoir<gamma){
-                        newListV.push_back(*it);
-                    };
+            if (dist<delta0){
+                if (probVoir<gamma){
+                    newListV.push_back(*it);
                 };
             };
         };
-        getBestiole()->setListVoisinsVoit(newListV);
+        getBestiole()->setListVoisinsEntend(newListV);
     };
 };
+
 
