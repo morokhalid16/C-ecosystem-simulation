@@ -7,8 +7,13 @@ Aquarium.o : Aquarium.h Aquarium.cpp
 Bestiole.o : Bestiole.h Bestiole.cpp
 	g++ -Wall -std=c++11  -c Bestiole.cpp -I .
 
+Comportement.o : Comportement.h Comportement.cpp
+	g++ -Wall -std=c++11  -c Comportement.cpp -I .
+
 Milieu.o : Milieu.h Milieu.cpp
 	g++ -Wall -std=c++11  -c Milieu.cpp -I .
+
+
 
 
 
