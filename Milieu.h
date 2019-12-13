@@ -28,13 +28,13 @@ private :
    float alphaMin, alphaMax; 
    float deltaYmin, deltaYmax;
    float delta0min, delta0max;
-   float gamma0min, gamma0max;
+   float gammaMin, gammaMax;
 
 
 public :
    Milieu( int _width, int _height );
    ~Milieu( void );
-   std::vector<Bestiole> get_listeBestionle(void){return listeBestioles;};
+   std::vector<Bestiole> get_listeBestiole(void){return listeBestioles;};
    float get_deathProbability( void ) const { return deathProbability;};
    float get_birthProbability( void ) const { return birthProbability;};
    float get_alphaMin( void ) const { return alphaMin;};
@@ -43,8 +43,8 @@ public :
    float get_deltaYmax( void ) const { return deltaYmax;};
    float get_delta0min( void ) const { return delta0min;};
    float get_delta0max( void ) const { return delta0max;};
-   float get_gamma0min( void ) const { return gamma0min;};
-   float get_gamma0max( void ) const { return gamma0max;};
+   float get_gammaMin( void ) const { return gammaMin;};
+   float get_gammaMax( void ) const { return gammaMax;};
 
    int getWidth( void ) const { return width; };
    int getHeight( void ) const { return height; };
